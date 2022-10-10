@@ -1,0 +1,25 @@
+﻿USE Master
+GO	
+IF DB_ID('UNILOGIN') IS NOT NULL
+	BEGIN
+ALTER DATABASE UNILOGIN SET SINGLE_USER
+DROP DATABASE UNILOGIN
+	END
+CREATE DATABASE UNILOGIN 
+GO
+USE UNILOGIN
+GO
+
+CREATE TABLE Users(
+Navn nvarchar (50) ,
+Pass nvarchar (15) 
+)
+
+INSERT INTO Users (Navn, Pass)
+VALUES ('Selin', 'HelloYou')
+
+INSERT INTO Users (Navn,Pass)
+VALUES ('Henrik', 'HeyYou')
+
+
+
